@@ -1,0 +1,50 @@
+{
+  "MAERSK-B.CO": {
+    "P/B": 0.65,
+    "EV/EBITDA": 5.4,
+    "Debt/Equity": 35,
+    "Current_Ratio": 1.45,
+    "Market_Cap": 25000000000.0,
+    "Shares_Out": 1700000000.0
+  },
+  "HLAG.DE": {
+    "P/B": 1.1,
+    "EV/EBITDA": 9.8,
+    "Debt/Equity": 40,
+    "Current_Ratio": 1.3,
+    "Market_Cap": 22000000000.0,
+    "Shares_Out": 170000000.0
+  },
+  "ZIM": {
+    "P/B": 0.8,
+    "EV/EBITDA": 7.5,
+    "Debt/Equity": 165,
+    "Current_Ratio": 0.95,
+    "Market_Cap": 2500000000.0,
+    "Shares_Out": 120000000.0
+  },
+  "FRO": {
+    "P/B": 2.4,
+    "EV/EBITDA": 6.1,
+    "Debt/Equity": 120,
+    "Current_Ratio": 1.1,
+    "Market_Cap": 8000000000.0,
+    "Shares_Out": 220000000.0
+  },
+  "SBLK": {
+    "P/B": 1.0,
+    "EV/EBITDA": 4.8,
+    "Debt/Equity": 55,
+    "Current_Ratio": 1.4,
+    "Market_Cap": 2800000000.0,
+    "Shares_Out": 110000000.0
+  },
+  "WAWI.OL": {
+    "P/B": 1.5,
+    "EV/EBITDA": 5.9,
+    "Debt/Equity": 80,
+    "Current_Ratio": 1.2,
+    "Market_Cap": 5000000000.0,
+    "Shares_Out": 430000000.0
+  }
+}

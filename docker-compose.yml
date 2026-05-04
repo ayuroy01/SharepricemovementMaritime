@@ -1,0 +1,11 @@
+services:
+  dashboard:
+    build: .
+    image: open-maritime-quant:latest
+    ports:
+      - "8501:8501"
+    environment:
+      # Provide via your shell or a local .env (not committed).
+      APP_MODE: ${APP_MODE:-auto}
+      NEWSAPI_KEY: ${NEWSAPI_KEY:-}
+    restart: unless-stopped

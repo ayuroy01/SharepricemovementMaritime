@@ -1,0 +1,74 @@
+{
+  "name": "May 2026 VLCC PG → Singapore",
+  "label": "Editable analyst scenario, not live market data",
+  "last_reviewed": "2026-05-02",
+  "description": "Default scenario for the VLCC Route Lab. Compares Cape of Good Hope vs Suez Canal routing for a Persian Gulf to Singapore VLCC voyage. Values are summarised in our own words from an analyst brief and are EDITABLE in the dashboard. Do not treat as live market data.",
+  "vessel": {
+    "hull_value_usd": 134000000,
+    "cargo_tonnes": 300000,
+    "cargo_value_per_tonne_usd": 600,
+    "fuel_consumption_mt_day": 65,
+    "scrubber_equipped": false
+  },
+  "fuel": {
+    "grade": "IFO380",
+    "price_per_mt_usd": 694,
+    "vlsfo_price_per_mt_usd": 805,
+    "co2_factor": 3.114
+  },
+  "charter": {
+    "rate_per_day_usd": 100000,
+    "financing_rate_annual": 0.03
+  },
+  "insurance": {
+    "hm_awrp_pct_suez": 0.005,
+    "hm_awrp_pct_cape": 0.0,
+    "cargo_awrp_pct_suez": 0.001,
+    "cargo_awrp_pct_cape": 0.0
+  },
+  "route": {
+    "suez_days": 21.1,
+    "cape_days": 36.25,
+    "suez_toll_usd": 640000,
+    "cape_port_fees_usd": 13333,
+    "cape_congestion_delay_days": 0
+  },
+  "regulation": {
+    "origin_in_eea": false,
+    "dest_in_eea": false,
+    "has_intermediate_eea_port_call": false,
+    "eua_price_usd": 80
+  },
+  "notes": [
+    "PG → Singapore is a non-EEA → non-EEA voyage; EU ETS coverage is 0%.",
+    "Cape congestion delay of 6 days can be used as a stress test (set in the dashboard).",
+    "Insurance percentages are placeholders — real AWRP varies by underwriter, hull, and current risk reports."
+  ],
+  "sources": [
+    {
+      "field": "fuel.co2_factor",
+      "value": 3.114,
+      "citation": "IPCC default emission factor for residual fuel oil (~3.114 t CO2 per t fuel)."
+    },
+    {
+      "field": "regulation.ets_scope_rules",
+      "citation": "European Commission, 'FAQ — Maritime transport in the EU Emissions Trading System (ETS)'; EMSA Maritime ETS resources; Directive (EU) 2023/959. Coverage is 100% for EEA↔EEA, 50% for EEA↔non-EEA, 0% for non-EEA↔non-EEA voyages, with 100% berth emissions in EEA ports."
+    },
+    {
+      "field": "route.suez_toll_usd",
+      "citation": "Suez Canal Authority toll circulars (SCNT-based). Verify with the latest circular for the vessel's tonnage and direction."
+    },
+    {
+      "field": "fuel.price_per_mt_usd",
+      "citation": "Bunker price feed NOT configured in this build. Replace via providers.py once a real source is wired (Ship & Bunker, Argus, Platts, etc.)."
+    },
+    {
+      "field": "charter.rate_per_day_usd",
+      "citation": "TCE / charter rate feed NOT configured. Verify against Baltic Exchange / Clarksons / Argus."
+    },
+    {
+      "field": "insurance.hm_awrp_pct_suez",
+      "citation": "Underwriter / war-risk broker quote. Premiums move with current threat assessments and JWC listed-areas."
+    }
+  ]
+}

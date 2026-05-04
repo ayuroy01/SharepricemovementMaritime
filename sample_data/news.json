@@ -1,0 +1,167 @@
+{
+  "MAERSK-B.CO": [
+    {
+      "title": "Maersk reports stronger container freight rates on transpacific routes (sample)",
+      "source": "Sample Maritime Wire",
+      "url": "https://example.com/sample/maersk-b.co/0",
+      "publishedAt": "2026-04-30T06:00:00+00:00",
+      "description": "(synthetic sample for demo mode \u2014 not real news)",
+      "sample_geo_hint": [
+        "shipping",
+        "freight"
+      ],
+      "sample_sentiment_hint": 0.5
+    },
+    {
+      "title": "Red Sea diversions continue to add days to Asia-Europe shipping schedules (sample)",
+      "source": "Sample Trade Daily",
+      "url": "https://example.com/sample/maersk-b.co/1",
+      "publishedAt": "2026-04-30T00:00:00+00:00",
+      "description": "(synthetic sample for demo mode \u2014 not real news)",
+      "sample_geo_hint": [
+        "red sea",
+        "shipping"
+      ],
+      "sample_sentiment_hint": -0.4
+    },
+    {
+      "title": "Maersk announces fleet renewal program, cargo capacity to expand (sample)",
+      "source": "Sample Industry Report",
+      "url": "https://example.com/sample/maersk-b.co/2",
+      "publishedAt": "2026-04-29T18:00:00+00:00",
+      "description": "(synthetic sample for demo mode \u2014 not real news)",
+      "sample_geo_hint": [
+        "fleet",
+        "cargo"
+      ],
+      "sample_sentiment_hint": 0.6
+    }
+  ],
+  "HLAG.DE": [
+    {
+      "title": "Hapag-Lloyd posts mixed quarterly volumes amid weaker spot freight market (sample)",
+      "source": "Sample Maritime Wire",
+      "url": "https://example.com/sample/hlag.de/0",
+      "publishedAt": "2026-04-30T06:00:00+00:00",
+      "description": "(synthetic sample for demo mode \u2014 not real news)",
+      "sample_geo_hint": [
+        "freight"
+      ],
+      "sample_sentiment_hint": -0.1
+    },
+    {
+      "title": "European port congestion eases as container ship arrivals normalise (sample)",
+      "source": "Sample Trade Daily",
+      "url": "https://example.com/sample/hlag.de/1",
+      "publishedAt": "2026-04-30T00:00:00+00:00",
+      "description": "(synthetic sample for demo mode \u2014 not real news)",
+      "sample_geo_hint": [
+        "port",
+        "container"
+      ],
+      "sample_sentiment_hint": 0.3
+    }
+  ],
+  "ZIM": [
+    {
+      "title": "ZIM's spot rate exposure highlights volatility in container shipping (sample)",
+      "source": "Sample Maritime Wire",
+      "url": "https://example.com/sample/zim/0",
+      "publishedAt": "2026-04-30T06:00:00+00:00",
+      "description": "(synthetic sample for demo mode \u2014 not real news)",
+      "sample_geo_hint": [
+        "shipping"
+      ],
+      "sample_sentiment_hint": -0.3
+    },
+    {
+      "title": "Houthi activity in Red Sea raises insurance premiums for tanker operators (sample)",
+      "source": "Sample Geopolitics Brief",
+      "url": "https://example.com/sample/zim/1",
+      "publishedAt": "2026-04-30T00:00:00+00:00",
+      "description": "(synthetic sample for demo mode \u2014 not real news)",
+      "sample_geo_hint": [
+        "houthi",
+        "red sea"
+      ],
+      "sample_sentiment_hint": -0.6
+    },
+    {
+      "title": "Industry sentiment improves on easing Suez canal disruptions (sample)",
+      "source": "Sample Trade Daily",
+      "url": "https://example.com/sample/zim/2",
+      "publishedAt": "2026-04-29T18:00:00+00:00",
+      "description": "(synthetic sample for demo mode \u2014 not real news)",
+      "sample_geo_hint": [
+        "suez",
+        "canal"
+      ],
+      "sample_sentiment_hint": 0.4
+    }
+  ],
+  "FRO": [
+    {
+      "title": "Frontline benefits from elevated tanker freight rates this quarter (sample)",
+      "source": "Sample Maritime Wire",
+      "url": "https://example.com/sample/fro/0",
+      "publishedAt": "2026-04-30T06:00:00+00:00",
+      "description": "(synthetic sample for demo mode \u2014 not real news)",
+      "sample_geo_hint": [
+        "tanker",
+        "freight"
+      ],
+      "sample_sentiment_hint": 0.5
+    },
+    {
+      "title": "Sanctions on shadow fleet redirect crude trade routes (sample)",
+      "source": "Sample Geopolitics Brief",
+      "url": "https://example.com/sample/fro/1",
+      "publishedAt": "2026-04-30T00:00:00+00:00",
+      "description": "(synthetic sample for demo mode \u2014 not real news)",
+      "sample_geo_hint": [
+        "sanction"
+      ],
+      "sample_sentiment_hint": -0.2
+    }
+  ],
+  "SBLK": [
+    {
+      "title": "Star Bulk reports fleet utilisation rising as bulk carrier demand picks up (sample)",
+      "source": "Sample Maritime Wire",
+      "url": "https://example.com/sample/sblk/0",
+      "publishedAt": "2026-04-30T06:00:00+00:00",
+      "description": "(synthetic sample for demo mode \u2014 not real news)",
+      "sample_geo_hint": [
+        "fleet",
+        "bulk carrier"
+      ],
+      "sample_sentiment_hint": 0.4
+    }
+  ],
+  "WAWI.OL": [
+    {
+      "title": "Wallenius Wilhelmsen sees steady demand for vehicle carrier capacity (sample)",
+      "source": "Sample Industry Report",
+      "url": "https://example.com/sample/wawi.ol/0",
+      "publishedAt": "2026-04-30T06:00:00+00:00",
+      "description": "(synthetic sample for demo mode \u2014 not real news)",
+      "sample_geo_hint": [
+        "vessel",
+        "cargo"
+      ],
+      "sample_sentiment_hint": 0.2
+    },
+    {
+      "title": "Trade-war tariff talk weighs on automotive shipping outlook (sample)",
+      "source": "Sample Geopolitics Brief",
+      "url": "https://example.com/sample/wawi.ol/1",
+      "publishedAt": "2026-04-30T00:00:00+00:00",
+      "description": "(synthetic sample for demo mode \u2014 not real news)",
+      "sample_geo_hint": [
+        "tariff",
+        "trade war"
+      ],
+      "sample_sentiment_hint": -0.3
+    }
+  ]
+}
