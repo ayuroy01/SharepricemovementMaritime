@@ -5,6 +5,8 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Demo mode](https://img.shields.io/badge/demo-bundled%20sample%20data-0277bd)](sample_data/)
 
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=ayuroy01/SharepricemovementMaritime&branch=main&mainModule=dashboard.py)
+
 An open-source research dashboard for monitoring maritime equities. It
 combines free-tier price and fundamental data, news sentiment, and a
 **transparent rule-based signal engine**, with a Streamlit UI, an
@@ -21,6 +23,20 @@ the repo and see it working in seconds.
 ![Overview](docs/screenshots/overview.png)
 
 ![VLCC Route Lab](docs/screenshots/vlcc-route-lab.png)
+
+More current UI captures:
+[Markets](docs/screenshots/markets.png) ·
+[Drill-down](docs/screenshots/drill-down.png) ·
+[Backtest](docs/screenshots/backtest.png) ·
+[News](docs/screenshots/news.png) ·
+[Data Health](docs/screenshots/data-health.png)
+
+## Walkthrough Video
+
+The 28-second captioned UI walkthrough is at
+[docs/videos/ui-walkthrough.mp4](docs/videos/ui-walkthrough.mp4). It navigates
+through Markets, Drill-down, Route Lab, Sensitivity, Backtest, News, and Data
+Health using the current dark maritime UI.
 
 Screenshots are captured in demo mode so they contain no secrets or proprietary
 live data. To refresh them, follow the
@@ -47,7 +63,7 @@ The launcher selects the next free port automatically if `8501` is busy.
 
 ## Features
 
-- **Seven-tab Streamlit UI**: Overview, Watchlist, Drill-down, News, Backtest, **VLCC Route Lab**, Data Health.
+- **Six-tab Streamlit UI**: Markets, Drill-down, **Route Lab**, Backtest, News, and Data Health.
 - **Three modes**: `demo` (bundled synthetic data, no keys, no network), `live` (yfinance + NewsAPI), `auto` (live if `NEWSAPI_KEY` is set, else demo). A `fallback` badge appears whenever a live provider fell back to sample data mid-run.
 - **Transparent rule-based signal engine** with sub-scores (technical, fundamental, news), confidence, risk score, and explicit data-quality warnings — no opaque ML claims.
 - **Honest backtest** with no lookahead bias, configurable commission/slippage, full trade ledger, equity + drawdown charts, and a buy-and-hold benchmark.

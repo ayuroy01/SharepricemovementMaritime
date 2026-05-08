@@ -1,0 +1,247 @@
+================================================================
+  OPEN MARITIME QUANT DASHBOARD — what is this project?
+================================================================
+
+Short answer
+------------
+It is a self-hostable, open-source WEB APP. A research dashboard
+for the maritime shipping industry. You run it on your computer (or
+a hosting service); it opens in your browser at http://localhost:8501.
+
+Not a:
+  - mobile app
+  - static website
+  - REST API
+  - command-line tool (though there is a tiny CLI launcher)
+  - SaaS product (no servers we run, no billing, no accounts)
+
+It IS:
+  - a Python application built on Streamlit (Streamlit turns Python
+    scripts into a real web server with an interactive UI)
+  - open-source under the MIT license
+  - free to use, free to fork, free to deploy
+
+================================================================
+  ELEVATOR PITCH (memorise this for if anyone asks)
+================================================================
+
+"It's an open-source web dashboard for monitoring shipping equities
+and modelling tanker route economics. You run it locally or deploy it
+to Streamlit Cloud. It pulls live stock prices and news, scores six
+major shipping companies on a transparent rule set, and includes a
+Cape-of-Good-Hope-vs-Suez-Canal voyage calculator that takes editable
+inputs and returns break-even insurance thresholds. There is a demo
+mode with synthetic data so anyone can try it without API keys."
+
+================================================================
+  TWO HALVES OF THE PRODUCT
+================================================================
+
+1. MARITIME EQUITY DASHBOARD
+   - Tracks 6 major shipping companies:
+     A.P. Moller-Maersk, Hapag-Lloyd, ZIM, Frontline, Star Bulk,
+     Wallenius Wilhelmsen.
+   - Pulls daily prices and fundamentals from Yahoo Finance (yfinance).
+   - Pulls news headlines from NewsAPI (live) or yfinance (fallback).
+   - Scores each ticker on a transparent rule set producing labels
+     like VALUE BUY / MOMENTUM BUY / HOLD / SELL / AVOID.
+   - Includes a backtest tab that simulates the technical strategy
+     on historical data with no lookahead bias.
+   - Shows the Baltic Dry Index proxy (BDRY ETF) as a market-sentiment
+     filter for the shipping cycle.
+
+2. VLCC ROUTE LAB
+   - Voyage-economics calculator for very-large crude tankers.
+   - Compares two routes: Cape of Good Hope vs Suez Canal.
+   - Takes editable inputs: cargo size, fuel price, charter rate,
+     war-risk premium, port fees, EU ETS scope, etc.
+   - Returns: total cost per route, the differential, and the
+     break-even war-risk premium that would tie the two routes.
+   - Uses real EU ETS scope rules (100 percent for EEA-to-EEA,
+     50 percent for EEA-to-non-EEA, 0 percent for non-EEA-to-non-EEA).
+   - Default scenario: PG to Singapore, May 2026, ~$1.8m break-even.
+
+================================================================
+  HOW SOMEONE USES IT (the three modes)
+================================================================
+
+DEMO mode (default for public visitors, no API keys required)
+  - Bundled synthetic data; no network calls, no rate limits.
+  - Charts get a "DEMO DATA" watermark so nobody mistakes
+    sample numbers for real ones.
+  - Anyone who clones the repo can run it in 30 seconds.
+
+LIVE mode (requires NEWSAPI_KEY in environment)
+  - Real Yahoo Finance prices and fundamentals.
+  - Real NewsAPI headlines.
+  - Provider failures gracefully fall back to sample data.
+
+FALLBACK mode (automatic)
+  - When in LIVE mode and a provider call fails, the app
+    substitutes sample data and labels it as such.
+
+================================================================
+  HOW TO RUN IT (the launcher hides the technical bits)
+================================================================
+
+Easiest:
+  python3 launcher.py
+  -> opens a small Tkinter window with buttons for Demo / Live / etc.
+
+Manual:
+  APP_MODE=demo python3 -m streamlit run dashboard.py
+
+Docker:
+  docker build -t open-maritime-quant:latest .
+  docker run --rm -p 8501:8501 -e APP_MODE=demo open-maritime-quant:latest
+
+After any of the above, open http://localhost:8501 in a browser.
+
+================================================================
+  WHAT IT IS NOT (so you do not over-promise)
+================================================================
+
+Not investment advice. The signal engine is a transparent rule set,
+not a validated model. We do not claim it beats the market.
+
+Not routing advice. The Route Lab is a calculator, not a recommendation
+engine. It does not consider weather, traffic, port slots, or current
+threat reports.
+
+Not insurance advice. War-risk premiums are user-editable assumptions,
+not real underwriter quotes.
+
+Not legal advice. EU ETS rules are implemented per public EC documents
+but should be verified with counsel before acting on them.
+
+Not warranty-backed. Free-tier data feeds are unreliable. Yahoo
+sometimes breaks. NewsAPI free tier is for development only.
+
+================================================================
+  TECH STACK (one-line each)
+================================================================
+
+Python 3.11+        the language everything is written in
+Streamlit           the framework that turns the Python script into a web app
+Plotly              the library that draws the charts
+pandas / numpy      the libraries that crunch the price data
+yfinance            the unofficial Python wrapper around Yahoo Finance
+NewsAPI             a paid news API with a small free tier
+VADER sentiment     the lightweight library that scores news sentiment
+matplotlib          used for one specific colormap inside the heatmaps
+pytest              the test framework (81 tests, all offline)
+GitHub Actions      runs the tests on every push
+Docker              optional containerised packaging
+
+The app has no database. State lives in the user's browser session.
+The app has no user accounts, no login, no analytics, no telemetry.
+
+================================================================
+  WHO IS IT FOR?
+================================================================
+
+The audience is small but specific:
+  - Maritime industry analysts who want a fast scratchpad.
+  - Quant researchers playing with shipping equities.
+  - Students learning about commodity-cycle equities and ETS rules.
+  - Open-source contributors who like a focused codebase.
+  - Anyone who wants to deploy a niche-finance dashboard for a
+    portfolio piece or hackathon submission.
+
+It is NOT for:
+  - retail investors making real trading decisions
+  - shipowners making real routing decisions
+  - underwriters making real insurance decisions
+  - anyone who needs guaranteed-uptime real-time data
+
+================================================================
+  WHAT MAKES IT DIFFERENT
+================================================================
+
+Most public maritime dashboards are paywalled (Clarksons, VesselsValue,
+Kpler, Baltic Exchange). Most equity dashboards are general-purpose
+(Yahoo Finance, Google Finance). What sits in the middle of those two
+worlds is mostly empty.
+
+This project fills a small slice of that gap as an honest, open-source
+prototype: a maritime-specific equity scanner plus a working voyage
+calculator that nobody else open-sources. The Route Lab in particular
+is the differentiated module — break-even AWRP solving, EU ETS scope
+validation, and sensitivity matrices are not normally given away free.
+
+================================================================
+  REPO LAYOUT (so you know where things live)
+================================================================
+
+dashboard.py                The Streamlit app entry point.
+maritime_data.py            Aggregates data into watchlist rows.
+config.py                   All knobs and the .env loader.
+providers.py                Live data fetchers (Yahoo, NewsAPI).
+demo_data.py                Loader for the bundled sample data.
+indicators.py               Technical indicators (RSI, SMAs, etc).
+signals.py                  The rule-based scoring engine.
+backtest.py                 Vectorised technical backtest.
+route_economics.py          The VLCC Route Lab math.
+theme.py                    Color tokens and Plotly theme.
+launcher.py                 The Tkinter / terminal launcher.
+
+sample_data/                Synthetic CSV / JSON fixtures for demo mode.
+docs/                       Publishing checklist, commercial notes,
+                            screenshots workflow, this audit.
+tests/                      81 offline pytest cases.
+scripts/                    smoke_test.py / doctor.py / security_check.py.
+.streamlit/config.toml      Dark theme configuration.
+Dockerfile / docker-compose Optional container packaging.
+.github/workflows/ci.yml    GitHub Actions test pipeline.
+
+requirements.txt            Python dependencies.
+README.md                   Public-facing docs.
+SECURITY.md                 Key rotation procedure, threat model.
+LICENSE                     MIT.
+CHANGELOG.md                Version history (currently 0.5.0).
+
+================================================================
+  GLOSSARY (in case anyone asks what each thing actually is)
+================================================================
+
+VLCC                        Very Large Crude Carrier. A class of oil
+                            tanker, ~300,000 deadweight tonnes.
+
+Cape vs Suez                The two main routes for tankers between
+                            the Persian Gulf and Asia / Europe. Suez
+                            is shorter but tolled and exposed to
+                            Houthi / Red Sea risk. Cape is longer
+                            but avoids that risk zone.
+
+AWRP                        Additional War Risk Premium. The extra
+                            insurance premium an underwriter charges
+                            when a vessel transits a high-risk area.
+
+TCE                         Time Charter Equivalent. The daily rate
+                            a shipowner effectively earns. Standard
+                            unit of profitability in shipping.
+
+BDI / BDRY                  Baltic Dry Index. A leading indicator of
+                            global trade demand. The actual BDI is
+                            paywalled; BDRY is a public ETF that
+                            tracks dry-bulk freight rates as a proxy.
+
+EU ETS                      European Union Emissions Trading System.
+                            Since 2024 it covers maritime CO2 emissions
+                            on voyages touching EU ports.
+
+RSI / SMA                   Standard technical indicators. RSI = the
+                            speed of recent price changes. SMA = a
+                            simple moving average of the price.
+
+================================================================
+  STATUS
+================================================================
+
+Version:                0.5.0
+Tests:                  81 passing
+License:                MIT
+Last meaningful change: visual redesign + UX teardown fixes
+GitHub:                 https://github.com/ayuroy01/SharepricemovementMaritime
+
+================================================================

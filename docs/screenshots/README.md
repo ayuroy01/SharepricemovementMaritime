@@ -4,6 +4,20 @@ The README references images at:
 
 - `docs/screenshots/overview.png`
 - `docs/screenshots/vlcc-route-lab.png`
+- `docs/screenshots/markets.png`
+- `docs/screenshots/drill-down.png`
+- `docs/screenshots/backtest.png`
+- `docs/screenshots/news.png`
+- `docs/screenshots/data-health.png`
+
+The README also links a captioned walkthrough video at:
+
+- `docs/videos/ui-walkthrough.mp4`
+
+> **The dashboard is dark-themed by default (v0.5.0+).** Capture
+> against the deep-navy background and the embedded night-sky hero —
+> don't try to force a light browser theme. The stars + tanker
+> silhouette + horizon are the signature of the brand.
 
 If those files don't exist yet (clean repo, before first capture), the
 README falls back to text. To capture them yourself:
@@ -25,9 +39,13 @@ Open <http://localhost:8501> and capture:
 
 | Image                                  | Tab                  | Recommended size      |
 |----------------------------------------|----------------------|-----------------------|
-| `overview.png`                         | 📊 Overview          | 1600×1000 (or 2× HiDPI) |
-| `vlcc-route-lab.png`                   | 🛳️ VLCC Route Lab → Cost Breakdown | 1600×1000             |
-| `data-health.png` *(optional)*         | 🩺 Data Health       | 1600×1000             |
+| `overview.png` / `markets.png`         | 📊 Markets           | 1600×1000 (or 2× HiDPI) |
+| `drill-down.png`                       | 🔍 Drill-down        | 1600×1000             |
+| `vlcc-route-lab.png`                   | 🛳️ Route Lab → Cost Breakdown | 1600×1000             |
+| `route-sensitivity.png`                | 🛳️ Route Lab → Sensitivity | 1600×1000             |
+| `backtest.png`                         | 🧪 Backtest          | 1600×1000             |
+| `news.png`                             | 📰 News              | 1600×1000             |
+| `data-health.png`                      | 🩺 Data Health       | 1600×1000             |
 
 ### macOS
 

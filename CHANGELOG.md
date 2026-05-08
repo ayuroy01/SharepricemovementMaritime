@@ -4,6 +4,44 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.0] — 2026-05-04
+
+### Added
+- **Visual redesign — dark night-sea theme.** Full dark palette
+  (`#07101F` deep navy ground, `#0E1B2E` surfaces, hairlined cards,
+  cyan-blue accent, brass for the active-tab indicator), Inter
+  webfont, tabular numerals on every metric and dataframe.
+- **Animated hero band** with a VLCC tanker silhouette (inline SVG,
+  technical-drawing style — not cartoonish), 30 fixed-position stars
+  with five animated twinklers, horizon hairline, and a slow specular
+  sheen across the water. Pure SVG + CSS keyframes; no JS, ~5 KB
+  inline. Wrapped in `prefers-reduced-motion` so it freezes
+  gracefully.
+- `theme.py` — single source of truth for color tokens, `apply_theme()`
+  for Plotly figures, and a custom diverging colormap that replaces
+  RdYlGn / RdYlGn_r in the Route Lab heatmaps so they read on dark.
+- Re-tuned **mode badges** (DEMO / LIVE / FALLBACK) to desaturated
+  hairlined chips instead of solid pills.
+- Re-tuned **Action chips** in tables and overview lists to match the
+  badge palette (replaces the previous saturated greens/reds).
+
+### Changed
+- `.streamlit/config.toml` `[theme]` switched to `base = "dark"` with
+  the new palette so first-paint matches the redesign.
+- All Plotly figures now route through `theme.apply_theme()` for
+  consistent paper/plot colors, gridlines, hover labels, and legends.
+- Drill-down price chart, BDRY chart, drawdown charts, equity curve,
+  and Route Lab stacked bar use the new colorway.
+- Pandas Styler `background_gradient` calls in the Route Lab use
+  `theme.diverging_cmap()` (red ↔ hairline ↔ green) instead of
+  matplotlib RdYlGn / RdYlGn_r.
+
+### Notes
+- No new runtime dependencies. The optional `matplotlib` import is
+  guarded; the diverging colormap silently falls back if matplotlib
+  isn't installed (it's already in `requirements.txt`).
+- All 81 tests still pass; provider/security/doctor checks unchanged.
+
 ## [0.4.0] — 2026-05-02
 
 ### Added

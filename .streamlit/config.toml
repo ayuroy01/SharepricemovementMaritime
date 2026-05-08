@@ -6,16 +6,16 @@ gatherUsageStats = false
 [client]
 # Public deployments should not show local developer toolbar items such as
 # deploy, rerun, or clear-cache controls.
-toolbarMode = "viewer"
+toolbarMode = "minimal"
 # Keep detailed tracebacks in server logs instead of the browser surface.
 showErrorDetails = "type"
 
 [theme]
-base = "light"
-primaryColor = "#0d47a1"
-backgroundColor = "#ffffff"
-secondaryBackgroundColor = "#f5f7fa"
-textColor = "#1f2937"
+base = "dark"
+primaryColor = "#6FB1FF"
+backgroundColor = "#07101F"
+secondaryBackgroundColor = "#0E1B2E"
+textColor = "#E6EDF7"
 font = "sans serif"
 
 [server]

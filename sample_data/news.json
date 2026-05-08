@@ -5,7 +5,7 @@
       "source": "Sample Maritime Wire",
       "url": "https://example.com/sample/maersk-b.co/0",
       "publishedAt": "2026-04-30T06:00:00+00:00",
-      "description": "(synthetic sample for demo mode \u2014 not real news)",
+      "description": "",
       "sample_geo_hint": [
         "shipping",
         "freight"
@@ -17,7 +17,7 @@
       "source": "Sample Trade Daily",
       "url": "https://example.com/sample/maersk-b.co/1",
       "publishedAt": "2026-04-30T00:00:00+00:00",
-      "description": "(synthetic sample for demo mode \u2014 not real news)",
+      "description": "",
       "sample_geo_hint": [
         "red sea",
         "shipping"
@@ -29,7 +29,7 @@
       "source": "Sample Industry Report",
       "url": "https://example.com/sample/maersk-b.co/2",
       "publishedAt": "2026-04-29T18:00:00+00:00",
-      "description": "(synthetic sample for demo mode \u2014 not real news)",
+      "description": "",
       "sample_geo_hint": [
         "fleet",
         "cargo"
@@ -43,7 +43,7 @@
       "source": "Sample Maritime Wire",
       "url": "https://example.com/sample/hlag.de/0",
       "publishedAt": "2026-04-30T06:00:00+00:00",
-      "description": "(synthetic sample for demo mode \u2014 not real news)",
+      "description": "",
       "sample_geo_hint": [
         "freight"
       ],
@@ -54,7 +54,7 @@
       "source": "Sample Trade Daily",
       "url": "https://example.com/sample/hlag.de/1",
       "publishedAt": "2026-04-30T00:00:00+00:00",
-      "description": "(synthetic sample for demo mode \u2014 not real news)",
+      "description": "",
       "sample_geo_hint": [
         "port",
         "container"
@@ -68,7 +68,7 @@
       "source": "Sample Maritime Wire",
       "url": "https://example.com/sample/zim/0",
       "publishedAt": "2026-04-30T06:00:00+00:00",
-      "description": "(synthetic sample for demo mode \u2014 not real news)",
+      "description": "",
       "sample_geo_hint": [
         "shipping"
       ],
@@ -79,7 +79,7 @@
       "source": "Sample Geopolitics Brief",
       "url": "https://example.com/sample/zim/1",
       "publishedAt": "2026-04-30T00:00:00+00:00",
-      "description": "(synthetic sample for demo mode \u2014 not real news)",
+      "description": "",
       "sample_geo_hint": [
         "houthi",
         "red sea"
@@ -91,7 +91,7 @@
       "source": "Sample Trade Daily",
       "url": "https://example.com/sample/zim/2",
       "publishedAt": "2026-04-29T18:00:00+00:00",
-      "description": "(synthetic sample for demo mode \u2014 not real news)",
+      "description": "",
       "sample_geo_hint": [
         "suez",
         "canal"
@@ -105,7 +105,7 @@
       "source": "Sample Maritime Wire",
       "url": "https://example.com/sample/fro/0",
       "publishedAt": "2026-04-30T06:00:00+00:00",
-      "description": "(synthetic sample for demo mode \u2014 not real news)",
+      "description": "",
       "sample_geo_hint": [
         "tanker",
         "freight"
@@ -117,7 +117,7 @@
       "source": "Sample Geopolitics Brief",
       "url": "https://example.com/sample/fro/1",
       "publishedAt": "2026-04-30T00:00:00+00:00",
-      "description": "(synthetic sample for demo mode \u2014 not real news)",
+      "description": "",
       "sample_geo_hint": [
         "sanction"
       ],
@@ -130,7 +130,7 @@
       "source": "Sample Maritime Wire",
       "url": "https://example.com/sample/sblk/0",
       "publishedAt": "2026-04-30T06:00:00+00:00",
-      "description": "(synthetic sample for demo mode \u2014 not real news)",
+      "description": "",
       "sample_geo_hint": [
         "fleet",
         "bulk carrier"
@@ -144,7 +144,7 @@
       "source": "Sample Industry Report",
       "url": "https://example.com/sample/wawi.ol/0",
       "publishedAt": "2026-04-30T06:00:00+00:00",
-      "description": "(synthetic sample for demo mode \u2014 not real news)",
+      "description": "",
       "sample_geo_hint": [
         "vessel",
         "cargo"
@@ -156,7 +156,7 @@
       "source": "Sample Geopolitics Brief",
       "url": "https://example.com/sample/wawi.ol/1",
       "publishedAt": "2026-04-30T00:00:00+00:00",
-      "description": "(synthetic sample for demo mode \u2014 not real news)",
+      "description": "",
       "sample_geo_hint": [
         "tariff",
         "trade war"

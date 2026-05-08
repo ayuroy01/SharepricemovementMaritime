@@ -153,7 +153,7 @@ def main() -> None:
                 "source": source,
                 "url": f"https://example.com/sample/{ticker.lower()}/{i}",
                 "publishedAt": published,
-                "description": "(synthetic sample for demo mode — not real news)",
+                "description": "",
                 "sample_geo_hint": geo,
                 "sample_sentiment_hint": sentiment_hint,
             })
